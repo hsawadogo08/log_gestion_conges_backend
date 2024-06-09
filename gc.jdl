@@ -1,0 +1,26 @@
+enum Etat {
+    EN_ATTENTE, VALIDEE, FERMEE
+}
+
+entity Agent {
+	matricule String required
+    nom String required
+    prenom String required
+    telephone String
+    fonction String
+}
+
+entity Demande {
+	motif String
+    dateDebut LocalDate
+    dateFin LocalDate
+    etat Etat
+}
+
+
+relationship OneToMany {
+	Agent to Demande
+}
+
+// Use Data Transfer Objects (DTO)
+dto * with mapstruct

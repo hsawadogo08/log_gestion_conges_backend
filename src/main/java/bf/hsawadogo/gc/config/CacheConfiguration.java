@@ -41,6 +41,9 @@ public class CacheConfiguration {
             createCache(cm, bf.hsawadogo.gc.repository.UserRepository.USERS_BY_LOGIN_CACHE);
             createCache(cm, bf.hsawadogo.gc.repository.UserRepository.USERS_BY_EMAIL_CACHE);
             createCache(cm, bf.hsawadogo.gc.domain.Authority.class.getName());
+            createCache(cm, bf.hsawadogo.gc.domain.Agent.class.getName());
+            createCache(cm, bf.hsawadogo.gc.domain.Agent.class.getName() + ".demandes");
+            createCache(cm, bf.hsawadogo.gc.domain.Demande.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }
