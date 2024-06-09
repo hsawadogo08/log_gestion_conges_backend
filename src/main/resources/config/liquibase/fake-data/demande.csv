@@ -1,4 +1,4 @@
-id;motif;date_debut;date_fin;etat
-1;Pour un evenement social;2024-06-08;2024-06-08;FERMEE
-2;RAS;2024-06-08;2024-06-08;VALIDEE
-3;Conges de repos;2024-06-08;2024-06-08;EN_ATTENTE
+id;motif;date_debut;date_fin;etat;agent_id
+1;Pour un evenement social;2024-06-08;2024-06-08;FERMEE;1
+2;RAS;2024-06-08;2024-06-08;VALIDEE;2
+3;Conges de repos;2024-06-08;2024-06-08;EN_ATTENTE;3

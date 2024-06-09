@@ -1,6 +1,7 @@
 package bf.hsawadogo.gc.service;
 
 import bf.hsawadogo.gc.domain.Demande;
+import bf.hsawadogo.gc.domain.enumeration.Etat;
 import bf.hsawadogo.gc.repository.DemandeRepository;
 import bf.hsawadogo.gc.service.dto.DemandeDTO;
 import bf.hsawadogo.gc.service.mapper.DemandeMapper;
@@ -39,6 +40,7 @@ public class DemandeService {
      */
     public DemandeDTO save(DemandeDTO demandeDTO) {
         log.debug("Request to save Demande : {}", demandeDTO);
+        demandeDTO.setEtat(Etat.EN_ATTENTE);
         Demande demande = demandeMapper.toEntity(demandeDTO);
         demande = demandeRepository.save(demande);
         return demandeMapper.toDto(demande);
